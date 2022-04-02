@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "02eafda0-14e8-4805-9527-0681a35a5007",
+		"name": "layers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"is 404\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"deleted or suspended\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://link.layers.education/{{slug}}",
+					"protocol": "https",
+					"host": [
+						"link",
+						"layers",
+						"education"
+					],
+					"path": [
+						"{{slug}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "slug",
+			"value": "w?cc?9x?",
+			"type": "string"
+		}
+	]
+}

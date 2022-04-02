@@ -1,0 +1,7 @@
+{
+    "name": "desafio",
+    "dependencies": {
+        "axios": "^0.26.1",
+        "combinate": "^1.1.9"
+    }
+}
